@@ -8,8 +8,8 @@ import me.a8kj.quicksg.internal.entity.player.SGPlayer;
 import me.a8kj.quicksg.parent.entity.arena.Arena;
 import me.a8kj.quicksg.parent.entity.arena.enums.ArenaNextPhase;
 import me.a8kj.quicksg.parent.entity.arena.enums.ArenaStatus;
+import me.a8kj.quicksg.parent.entity.game.atributes.ArenaGameVote;
 import me.a8kj.quicksg.parent.entity.game.atributes.GamePhase;
-import me.a8kj.quicksg.parent.entity.game.manager.ArenaGameVote;
 import me.a8kj.quicksg.parent.entity.game.mechanic.GameMechanic;
 import me.a8kj.quicksg.parent.entity.player.enums.PlayerMode;
 import me.a8kj.quicksg.parent.timer.Timer;
@@ -21,6 +21,8 @@ public interface Game {
     String getName();
 
     Set<SGPlayer> getPlayers();
+
+    Map<UUID, SGPlayer> getPlayersById();
 
     Map<PlayerMode, Set<SGPlayer>> getPlayersByMode();
 

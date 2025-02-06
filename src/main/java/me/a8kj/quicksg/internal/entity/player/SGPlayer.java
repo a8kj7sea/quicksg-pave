@@ -21,6 +21,6 @@ public class SGPlayer implements Player {
 
     private PlayerMode playerMode;
 
-    private final Player bukkitPlayer;
+    private final org.bukkit.entity.Player bukkitPlayer;
 
 }

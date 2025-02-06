@@ -53,5 +53,5 @@ public interface Player {
      * 
      * @return bukkit player
      */
-    Player getBukkitPlayer();
+    org.bukkit.entity.Player getBukkitPlayer();
 }

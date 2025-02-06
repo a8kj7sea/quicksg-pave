@@ -8,7 +8,7 @@ import me.a8kj.quicksg.parent.entity.arena.enums.ArenaNextPhase;
 @Getter
 public enum GamePhase {
 
-    LOBBY(ArenaNextPhase.START),
+    LOBBY(ArenaNextPhase.START), // pre game
     INGAME(ArenaNextPhase.END),
     GAME_OVER(ArenaNextPhase.RESTART);
 

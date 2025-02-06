@@ -15,4 +15,6 @@ public interface VotedArena {
     void addVote(SGPlayer player);
 
     void removeVote(SGPlayer player);
+
+    void clearVotes();
 }

@@ -1,4 +1,4 @@
-package me.a8kj.quicksg.parent.entity.arena;
+package me.a8kj.quicksg.parent.entity.arena.attributes;
 
 public interface ArenaSettings {
 

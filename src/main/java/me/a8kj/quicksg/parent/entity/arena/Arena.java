@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.bukkit.Location;
 
+import me.a8kj.quicksg.parent.entity.arena.attributes.ArenaSettings;
 import me.a8kj.quicksg.parent.entity.arena.attributes.Lobby;
 import me.a8kj.quicksg.parent.entity.arena.enums.ArenaStatus;
 
@@ -23,5 +24,7 @@ public interface Arena {
 
     ArenaSettings getSettings();
 
-    void executeAction(ArenaAction action); // like kick or smth
+    default void executeAction(ArenaAction action) {
+        action.execute(this);
+    } // like kick or smth
 }

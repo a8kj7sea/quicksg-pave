@@ -4,5 +4,5 @@ import org.bukkit.Location;
 
 public interface Lobby {
 
-    Location getSpawnLocaion();
+    Location getSpawnLocation();
 }
