@@ -2,14 +2,14 @@ package me.a8kj.quicksg.parent.entity.game;
 
 import java.util.Map;
 import java.util.Set;
-
-import org.bukkit.entity.Player;
+import java.util.UUID;
 
 import me.a8kj.quicksg.internal.entity.player.SGPlayer;
 import me.a8kj.quicksg.parent.entity.arena.Arena;
 import me.a8kj.quicksg.parent.entity.arena.enums.ArenaNextPhase;
 import me.a8kj.quicksg.parent.entity.arena.enums.ArenaStatus;
 import me.a8kj.quicksg.parent.entity.game.atributes.GamePhase;
+import me.a8kj.quicksg.parent.entity.game.manager.ArenaGameVote;
 import me.a8kj.quicksg.parent.entity.game.mechanic.GameMechanic;
 import me.a8kj.quicksg.parent.entity.player.enums.PlayerMode;
 import me.a8kj.quicksg.parent.timer.Timer;
@@ -24,13 +24,13 @@ public interface Game {
 
     Map<PlayerMode, Set<SGPlayer>> getPlayersByMode();
 
-    void addPlayer(Player player);
+    void addPlayer(UUID player);
 
-    void removePlayer(Player player);
+    void removePlayer(UUID player);
 
-    void addSpectator(Player player);
+    void addSpectator(UUID player);
 
-    void removeSpectator(Player player);
+    void removeSpectator(UUID player);
 
     int getActivePlayerCount();
 
@@ -45,6 +45,8 @@ public interface Game {
     default void setArenaStatus(ArenaStatus status) {
         this.getArena().setArenaStatus(status);
     }
+
+    ArenaGameVote getArenaGameVote();
 
     ArenaNextPhase getArenaNextPhase();
 
