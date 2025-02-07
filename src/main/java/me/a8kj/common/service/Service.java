@@ -1,8 +1,8 @@
 package me.a8kj.common.service;
 
-public interface Service {
+public interface Service<T> {
 
-    void serve();
+    void serve(T t);
 
-    boolean canServe();
+    boolean canServe(T t);
 }

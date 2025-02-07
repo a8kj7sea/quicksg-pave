@@ -42,6 +42,8 @@ public interface Game {
 
     Map<String, Timer> getTimers();
 
+    void setGameTimers(Map<String, Timer> timers);
+
     void setGamePhase(GamePhase phase);
 
     default void setArenaStatus(ArenaStatus status) {

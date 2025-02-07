@@ -120,8 +120,14 @@ public class GameImpl implements Game {
 
     @Override
     public void serve(GameService service) {
-        if (service.canServe()) {
+        if (service.canServe(this)) {
             service.serve(this);
         }
+    }
+
+    @Override
+    public void setGameTimers(Map<String, Timer> timers) {
+        this.timers.clear();
+        this.timers.putAll(timers);
     }
 }
