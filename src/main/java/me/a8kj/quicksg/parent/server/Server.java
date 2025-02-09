@@ -12,9 +12,15 @@ public interface Server {
 
     void setMainArena(Arena arena);
 
-    void startServerCycle();
-
     void serve(ServerService serverService);
 
-    void stopServerCycle();
+    void start();
+
+    void stop();
+
+    void restart();
+
+    boolean isRunning();
+
+    boolean hasSetup();
 }
