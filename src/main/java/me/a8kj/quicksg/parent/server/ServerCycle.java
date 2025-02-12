@@ -6,8 +6,10 @@ public interface ServerCycle {
 
     void onLoad();
 
-    void onShutdown();
+    void onStop();
 
     void onRestart();
+
+    void setServer(Server<?> server);
 
 }

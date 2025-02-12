@@ -4,5 +4,7 @@ public interface Service<T> {
 
     void serve(T t);
 
-    boolean canServe(T t);
+    default boolean canServe(T t) {
+        return true;
+    }
 }
